@@ -13,5 +13,5 @@ def create():
     return sys_msg
 
 
- __name__ == '__main__':
+if  __name__ == '__main__':
     create()

@@ -5,9 +5,8 @@ import os
 
 def create():
     """Get the hash of the last commited commit"""
-    message = os.popen("git log -n 1 master --pretty=format:\"%H\"").read()
 
-    commit_hash = message
+    commit_hash = os.popen("git log -n 1 master --pretty=format:\"%H\"").read()
     msg = """
     git show --pretty=\"format:\" --name-only {commit_hash}\""
     """.format(commit_hash=commit_hash)

@@ -5,7 +5,6 @@ import subprocess
 #svnlook location
 LOOK='svnlook'
 
-
 def get_commit_info( repo, revision ):
 	log = svn_look('log', repo, '-r', revision)
 	author = svn_look('author', repo, '-r', revision)
@@ -21,4 +20,4 @@ def svn_look( *args ):
 	return out
 
 if __name__ == '__main__':
-	main(sys.get_commit_info)
+	get_commit_info
